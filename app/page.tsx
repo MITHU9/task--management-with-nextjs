@@ -1,4 +1,8 @@
 import { Button } from "@/components/ui/button";
+import {
+  LoginLink,
+  RegisterLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
 
 export default function Home() {
   return (
@@ -6,9 +10,14 @@ export default function Home() {
       <h1 className="text-5xl font-bold text-center">
         Welcome to Daily Task management!
       </h1>
-      <Button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
-        Get Started
-      </Button>
+      <div className="mt-4 flex space-x-4">
+        <Button className="bg-black text-white hover:bg-black/90" asChild>
+          <RegisterLink>Get Started</RegisterLink>
+        </Button>
+        <Button asChild variant={"outline"}>
+          <LoginLink>Sign in</LoginLink>
+        </Button>
+      </div>
     </div>
   );
 }
