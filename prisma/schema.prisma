@@ -1,6 +1,5 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
 }
 
 datasource db {
@@ -23,7 +22,7 @@ model User {
   comments Comment[]
   subscription Subscription?
 
-  onBoardingCompleted Boolean @default(false)
+  onboardingCompleted Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
