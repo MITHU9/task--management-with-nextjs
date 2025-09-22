@@ -16,4 +16,13 @@ export const userSchema = z.object({
   role: z.string().min(1, "Role is required"),
 });
 
+export const workspaceSchema = z.object({
+  name: z
+    .string()
+    .min(2, "Name is required")
+    .max(100, "Maximum is 100 characters"),
+  description: z.string().optional(),
+});
+
 export type UserDataType = z.infer<typeof userSchema>;
+export type WorkspaceDataType = z.infer<typeof workspaceSchema>;

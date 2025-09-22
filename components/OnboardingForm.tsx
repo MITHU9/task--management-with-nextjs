@@ -52,14 +52,13 @@ const OnboardingForm = ({ name, email, image }: OnboardingFormProps) => {
       image: image || "",
       country: "",
       industryType: "",
-      password: "",
       role: "",
     },
   });
 
   const onSubmit = async (data: UserDataType) => {
     try {
-      console.log("button clicked");
+      //console.log("button clicked");
 
       setPending(true);
       await createUser(data);
